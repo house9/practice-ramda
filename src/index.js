@@ -250,3 +250,34 @@ xdescribe('applyWithDefaults', () => {
     expect(applyWithDefaults(defaults, override)).to.eql(expected)
   })
 })
+
+function convertPropertiesToIntegers() {
+  return
+}
+
+xdescribe('convertPropertiesToIntegers', () => {
+  it('returns the existing object if no changes', () => {
+    const data = { foo: '1' }
+    const propertyList = ['fud']
+    const expected = { foo: '1' }
+
+    expect(convertPropertiesToIntegers(propertyList, data)).to.eql(expected)
+  })
+
+  it('updates the given list of properties', () => {
+    const data = {
+      foo: '1',
+      bar: '9'
+    }
+    const propertyList = [
+      'foo',
+      'fud'
+    ]
+    const expected = {
+      foo: 1,
+      bar: '9'
+    }
+
+    expect(convertPropertiesToIntegers(propertyList, data)).to.eql(expected)
+  })
+})
