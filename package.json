@@ -1,5 +1,5 @@
 {
-  "name": "ramda-kata",
+  "name": "fun-with-ramda",
   "scripts": {
     "prebuild": "rm -rf dist && mkdir dist",
     "build": "babel src -o dist/index.js",
