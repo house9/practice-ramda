@@ -73,6 +73,45 @@ xdescribe('multiplyByThreePlusFour', () => {
   })
 })
 
+function valueOrZero() {
+  return
+}
+
+xdescribe('valueOrZero', () => {
+  it('returns the given value', () => {
+    expect(valueOrZero(10)).to.eql(10)
+  })
+
+  it('returns 0 for undefined', () => {
+    expect(valueOrZero()).to.eql(0)
+  })
+
+  it('returns 0 for null', () => {
+    expect(valueOrZero(null)).to.eql(0)
+  })
+
+  it('returns 0 for NaN', () => {
+    expect(valueOrZero(NaN)).to.eql(0)
+  })
+})
+
+function runAll() {
+  return
+}
+
+xdescribe('runAll', () => {
+  it('applies all of the functions to the value', () => {
+    const addOne = value => {
+      return value + 1
+    }
+    const timesTwo = value => {
+      return value * 2
+    }
+
+    expect(runAll(10, addOne, timesTwo)).to.eql(22)
+  })
+})
+
 function selectProperties() {
   return
 }
@@ -175,5 +214,39 @@ xdescribe('setNestedProperty', () => {
     }
 
     expect(actual).to.eql(expected)
+  })
+})
+
+function appendToList() {
+  return
+}
+
+xdescribe('appendToList', () => {
+  it('is added to the list', () => {
+    expect(appendToList(1, []).length).to.eq(1)
+  })
+})
+
+function applyWithDefaults() {
+  return
+}
+
+xdescribe('applyWithDefaults', () => {
+  it('overrides properties', () => {
+    const defaults = {
+      start: 1,
+      end: 101
+    }
+    const override = {
+      start: 10,
+      extra: 500
+    }
+    const expected = {
+      start: 10,
+      end: 101,
+      extra: 500
+    }
+
+    expect(applyWithDefaults(defaults, override)).to.eql(expected)
   })
 })
