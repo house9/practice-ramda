@@ -1,5 +1,6 @@
 import { expect } from 'chai'
-// import R from 'ramda'
+// eslint-disable-next-line no-unused-vars
+import R from 'ramda'
 
 function inRange() {
   return
@@ -101,5 +102,78 @@ xdescribe('setProperty', () => {
     }
 
     expect(actual).to.eql(expected)
+  })
+})
+
+function setNestedProperty() {
+  return
+}
+
+xdescribe('setNestedProperty', () => {
+  const data = {
+    parent: {
+      child: 'child',
+      nested: {
+        nestedChild: 'nestedChild'
+      }
+    }
+  }
+
+  it('appends the new property', () => {
+    const actual = setNestedProperty(['parent', 'sibling'], 'SIBLING', data)
+    const expected = {
+      parent: {
+        child: 'child',
+        sibling: 'SIBLING',
+        nested: {
+          nestedChild: 'nestedChild'
+        }
+      }
+    }
+
+    expect(actual).to.eql(expected)
+  })
+
+  it('updates existing property', () => {
+    const actual = setNestedProperty(
+      ['parent', 'nested', 'nestedChild'],
+      'NESTED',
+      data
+    )
+    const expected = {
+      parent: {
+        child: 'child',
+        nested: {
+          nestedChild: 'NESTED'
+        }
+      }
+    }
+
+    expect(actual).to.eql(expected)
+  })
+})
+
+function multiplyByTwo() {
+  return
+}
+
+xdescribe('multiplyByTwo', () => {
+  it('example', () => {
+    const f = multiplyByTwo()
+
+    expect(f(50)).to.eq(100)
+  })
+})
+
+function multiplyByThreePlusFour() {
+  // implement using a different technique then multiplyByTwo
+  return
+}
+
+xdescribe('multiplyByThreePlusFour', () => {
+  it('example', () => {
+    const f = multiplyByThreePlusFour()
+
+    expect(f(50)).to.eq(154)
   })
 })
