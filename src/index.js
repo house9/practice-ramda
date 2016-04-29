@@ -5,7 +5,7 @@ function inRange() {
   return
 }
 
-describe('inRange', () => {
+xdescribe('inRange', () => {
   it('is in range', () => {
     expect(inRange(5, 10, 7)).to.eq(7)
   })
@@ -23,7 +23,7 @@ function notAbove() {
   return
 }
 
-describe('notAbove', () => {
+xdescribe('notAbove', () => {
   it('above', () => {
     expect(notAbove(100, 105)).to.eq(100)
   })
@@ -37,7 +37,7 @@ function notBelow() {
   return
 }
 
-describe('notBelow', () => {
+xdescribe('notBelow', () => {
   it('above', () => {
     expect(notBelow(100, 110)).to.eql(110)
   })
@@ -51,7 +51,7 @@ function selectProperties() {
   return
 }
 
-describe('selectProperties', () => {
+xdescribe('selectProperties', () => {
   const data = {
     awk: 'bla',
     foo: 'bar',
@@ -73,7 +73,7 @@ function setProperty() {
   return
 }
 
-describe('setProperty', () => {
+xdescribe('setProperty', () => {
   const data = {
     awk: 'bla',
     foo: 'bar',
