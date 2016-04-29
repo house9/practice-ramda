@@ -48,6 +48,31 @@ xdescribe('notBelow', () => {
   })
 })
 
+function multiplyByTwo() {
+  return
+}
+
+xdescribe('multiplyByTwo', () => {
+  it('example', () => {
+    const f = multiplyByTwo()
+
+    expect(f(50)).to.eq(100)
+  })
+})
+
+function multiplyByThreePlusFour() {
+  // implement using a different technique then multiplyByTwo
+  return
+}
+
+xdescribe('multiplyByThreePlusFour', () => {
+  it('example', () => {
+    const f = multiplyByThreePlusFour()
+
+    expect(f(50)).to.eq(154)
+  })
+})
+
 function selectProperties() {
   return
 }
@@ -150,30 +175,5 @@ xdescribe('setNestedProperty', () => {
     }
 
     expect(actual).to.eql(expected)
-  })
-})
-
-function multiplyByTwo() {
-  return
-}
-
-xdescribe('multiplyByTwo', () => {
-  it('example', () => {
-    const f = multiplyByTwo()
-
-    expect(f(50)).to.eq(100)
-  })
-})
-
-function multiplyByThreePlusFour() {
-  // implement using a different technique then multiplyByTwo
-  return
-}
-
-xdescribe('multiplyByThreePlusFour', () => {
-  it('example', () => {
-    const f = multiplyByThreePlusFour()
-
-    expect(f(50)).to.eq(154)
   })
 })
