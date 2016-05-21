@@ -101,12 +101,8 @@ function runAll() {
 
 xdescribe('runAll', () => {
   it('applies all of the functions to the value', () => {
-    const addOne = value => {
-      return value + 1
-    }
-    const timesTwo = value => {
-      return value * 2
-    }
+    const addOne = value => value + 1
+    const timesTwo = value => value * 2
 
     expect(runAll(10, addOne, timesTwo)).to.eql(22)
   })

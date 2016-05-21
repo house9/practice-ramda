@@ -1,6 +1,3 @@
 {
-  "extends": "zeal",
-  "rules": {
-    "arrow-body-style": ["error", "always"]    
-  }
+  "extends": "zeal"
 }
